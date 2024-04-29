@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.user {
+  width: fit-content;
+  margin: 150px auto;
+  display: flex;
+}
+.user img {
+  width: 320px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  z-index: 100;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.info {
+  padding: 10px 50px;
+  transition: 0.5s;
+}
+.info h1 {
+  font-size: 80px;
+  font-weight: 500;
+}
+.info p {
+  line-height: 26px;
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 1s;
+}
+.info a {
+  background: #4f40ff;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.info span {
+  color: #4f40ff;
+  font-weight: 500;
+}
+.close-icon {
+  width: 320px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+.close-icon::before,
+.close-icon::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+.close-icon::before {
+  transform: rotate(30deg);
+}
+.close-icon::after {
+  transform: rotate(-30deg);
+}
+.hide-details .info {
+  transform: translateX(50px);
+  opacity: 0;
+}
+.hide-details .close-icon {
+  transform: translateX(-450px);
+  transition: 0.5s;
+}
+.hide-details img {
+  transform: translateX(450px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
